@@ -3,13 +3,13 @@ function App(){
 
   const [nome, setNome] = useState('Ronaldo')
 
-return (
-<div>
-  <h3>PIzzaria 2E</h3>
-
-  <input 
+  const Formulario = ()=> {
+    const [nome, setNome] = useState('Ronaldo')
+    return (
+      <div>
+        <input 
   className= "nome"
-  onCharge={(e)=>{setNome(e.target.value)}}
+  onChange={(e)=>{setNome(e.target.value)}}
   type="text" />
 
 
@@ -19,6 +19,20 @@ return (
   >
     CLIQUE AQUI
   </button>
+        
+      </div>
+
+    )
+  }
+
+return (
+<div>
+  <h3>PIzzaria 2E</h3>
+
+    <Formulario />
+    <Formulario />
+    <Formulario />
+    <Formulario />
 
 </div>
 )
